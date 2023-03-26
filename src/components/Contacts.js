@@ -8,7 +8,6 @@ const Contacts =(props) => {
         <h1>{post.name}</h1>
         <div>
             {post.address}
-            {post.email}
         </div>
       </Link>
     </div>

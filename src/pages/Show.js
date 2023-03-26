@@ -6,7 +6,6 @@ const Show = (props) => {
         <>
         <div>
             <div><h3> {contact.name}</h3></div>
-        
             <div><h3> {contact.address}</h3></div>
             <div><h3> {contact.email}</h3></div>
             <div><h3> {contact.phone_number}</h3></div>
