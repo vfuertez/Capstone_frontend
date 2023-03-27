@@ -4,12 +4,11 @@ import { redirect } from 'react-router-dom'
 export async function CreateAction({ request }) {
   const formData = await request.formData()
 
-  const newContact = {
+  const newRecipe = {
     name: formData.get('name'),
-    address: formData.get('address'),
-    email: formData.get('email'),
-    phone_number: formData.get('phone_number'),
-    url: formData.get('url'),
+    image: formData.get('image'),
+    ingredients: formData.get('ingredients'),
+    recipe: formData.get('recipe'),
   }
 
   await fetch(url, {
@@ -17,7 +16,7 @@ export async function CreateAction({ request }) {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(newContact),
+    body: JSON.stringify(newRecipe),
   })
 
   return redirect('/')
@@ -26,12 +25,11 @@ export async function CreateAction({ request }) {
 export async function UpdateAction({ request, params }) {
   const formData = await request.formData()
 
-  const updateContact = {
+  const updateRecipe = {
     name: formData.get('name'),
-    address: formData.get('address'),
-    email: formData.get('email'),
-    phone_number: formData.get('phone_number'),
-    url: formData.get('url'),
+    image: formData.get('image'),
+    ingredients: formData.get('ingredients'),
+    recipe: formData.get('recipe'),
   }
 
   await fetch(url + params.id + '/', {
@@ -39,7 +37,7 @@ export async function UpdateAction({ request, params }) {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(updateContact),
+    body: JSON.stringify(updateRecipe),
   })
 
   return redirect('/')
