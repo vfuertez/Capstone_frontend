@@ -105,7 +105,7 @@ Make food recipes
 
 
 ## App Screenshot
-![](https://i.imgur.com/ywU7LrY.png)
+![](https://i.imgur.com/LQ3klFI.png)
 
 ## Live Site
 - [Link](https://recipe-capstone.netlify.app/)
