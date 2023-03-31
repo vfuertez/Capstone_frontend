@@ -1,4 +1,4 @@
-import Contacts from '../components/Contacts'
+import Recipe from '../components/Recipe'
 import { useLoaderData } from 'react-router-dom'
 
 const Index = (props) => {
@@ -7,7 +7,7 @@ const Index = (props) => {
   return (
     <div className='main'>
       {contacts.map((contact) => (
-        <Contacts post={contact} key={contact.id} />
+        <Recipe post={contact} key={contact.id} />
       ))}
     
     </div>

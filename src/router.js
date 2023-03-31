@@ -6,6 +6,8 @@ import Show from "./pages/Show"
 import { CreateAction, UpdateAction, DeleteAction } from "./actions";
 import AddPage from "./pages/AddPage"
 import Search from "./pages/Search"
+import Sites from "./pages/Sites"
+import Update from "./pages/Update"
 
 const router = createBrowserRouter(createRoutesFromElements(
     <>
@@ -17,6 +19,8 @@ const router = createBrowserRouter(createRoutesFromElements(
             <Route path="delete/:id" action={DeleteAction}/>
             <Route path="add" element={<AddPage/>} />
             <Route path="search" element={<Search/>} />
+            <Route path="sites" element={<Sites/>} />
+            <Route path="recipe/:id/update" element={<Update/>} loader={ShowLoader}/>
         </Route>
     </>
 ))

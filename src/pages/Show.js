@@ -4,7 +4,7 @@ const Show = (props) => {
     const recipe = useLoaderData()
     return (
         <>
-<section class="text-gray-600 body-font">
+<section class="text-gray-600 body-font " >
   <div class="container px-5 py-24 mx-auto flex flex-col">
     <div class="lg:w-4/6 mx-auto">
       <div class="rounded-lg h-64 overflow-hidden">
@@ -20,45 +20,29 @@ const Show = (props) => {
           </div>
         </div>
         <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-          <p class="leading-relaxed text-lg mb-4">Meggings portland fingerstache lyft, post-ironic fixie man bun banh mi umami everyday carry hexagon locavore direct trade art party. Locavore small batch listicle gastropub farm-to-table lumbersexual salvia messenger bag. Coloring book flannel truffaut craft beer drinking vinegar sartorial, disrupt fashion axe normcore meh butcher. Portland 90's scenester vexillologist forage post-ironic asymmetrical, chartreuse disrupt butcher paleo intelligentsia pabst before they sold out four loko. 3 wolf moon brooklyn. Meggings portland fingerstache lyft, post-ironic fixie man bun banh mi umami everyday carry hexagon locavore direct trade art party. Locavore small batch listicle gastropub farm-to-table lumbersexual salvia messenger bag. Coloring book flannel truffaut craft beer drinking vinegar sartorial, disrupt fashion axe normcore meh butcher. Portland 90's scenester vexillologist forage post-ironic asymmetrical, chartreuse disrupt butcher paleo intelligentsia pabst before they sold out four loko. 3 wolf moon brooklyn.</p>
-          
+          <p class="leading-relaxed text-lg mb-4">{recipe.recipe}</p>
+          <Link to="/" class="text-indigo-500 inline-flex items-center">Home
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </Link>
         </div>
       </div>
+      <Link to={`update`}> <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded mr-8 w-24 ">
+  Edit 
+</button></Link>
+
+<button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-800 rounded ml-4 w-24">
+<Form action={`/delete/${recipe.id}`} method="post">
+           <button> Delete</button>
+          </Form>
+</button>
     </div>
   </div>
 </section>
-        <Link to="/">
-        <button>Go Back</button>
-      </Link>
-      <div >
-        <Form action={`/update/${recipe.id}`} method="post">
-        <div class="mb-3 pt-0">
-        <label for="name"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-blue-800" >NAME</label>
-    <input type="text" name="name" id="name" placeholder="Placeholder" class="px-3 py-3 placeholder-slate-300 text-slate-600 relative  rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-11/12 sm:w-3/6  bg-slate-300" defaultValue={recipe.name}/>
-  </div>
-
-  <div class="mb-3 pt-0">
-        <label for="image" class="block mb-2 text-sm font-medium text-gray-900 dark:text-blue-800" >IMAGE</label>
-    <input type="text" name="image" id="name" placeholder="Placeholder" class="px-3 py-3 placeholder-slate-300 text-slate-600 relative  rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-11/12 sm:w-3/6  bg-slate-300" defaultValue={recipe.image}/>
-  </div>
-
-<div class="mb-3">
-  <label for="ingredients" class="block mb-2 text-sm font-medium text-gray-900 dark:text-blue-800" >INGREDIENTS</label>
-  <textarea type="text" name="ingredients" id="ingredients" placeholder="Ingredients" class="px-3 py-3 placeholder-slate-300 text-slate-600 relative  rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-11/12 sm:w-3/6 resize-y h-44 sm:h-72 bg-slate-300" defaultValue={recipe.ingredients}/>
-</div>
-
-<div class="mb-3">
-  <label for="recipe" class="block mb-2 text-sm font-medium text-gray-900 dark:text-blue-800" >RECIPE</label>
-  <textarea type="text" name="recipe" id="recipe" placeholder="Ingredients" class="px-3 py-3 placeholder-slate-300 text-slate-600 relative  rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-11/12 sm:w-3/6 resize-y h-44 sm:h-72 bg-slate-300" defaultValue={recipe.recipe}/>
-</div>
-<button class="bg-blue-400">update</button>
-        </Form>
-        <div className="delete_container">
-          <Form action={`/delete/${recipe.id}`} method="post">
-            <button >Delete</button>
-          </Form>
-        </div>
-      </div>
+       
+      
+      
         </>
     )
   };
