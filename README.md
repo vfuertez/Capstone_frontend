@@ -68,3 +68,44 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Recipe Maker
+
+Make food recipes
+
+## Tech Stack
+
+**Backend:** Django, Python, render
+
+**Frontend:** React, Tailwind, Netlify
+
+
+# Routes
+
+| Route     | Element    | Loader     | Action  | Description |
+| :-----   | :-------  | :------:   | :-----: | :---
+| `/`       | Index      |IndexLoader |         |Loads items  |
+| `###/id`  | Show       |ShowLoader  |         |Loads specific items| 
+| `create`  | Create     |            |createAction| Add items| 
+| `update`  | Update     |            |updateAction| Update items| 
+| `delete`  | Delete     |            |deleteAction| Delete items| 
+
+## Model
+![](https://i.imgur.com/ywU7LrY.png[/img])
+
+## Wireframe
+
+![](https://i.imgur.com/4oyb8gf.png)
+
+
+## Project Link
+- [Frontend](https://github.com/vfuertez/Capstone_frontend)
+- [Backend](https://github.com/vfuertez/Recipe_backend)
+
+
+## App Screenshot
+![](https://i.imgur.com/ywU7LrY.png)
+
+## Live Site
+- [Link](https://recipe-capstone.netlify.app/)
