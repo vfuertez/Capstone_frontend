@@ -92,7 +92,7 @@ Make food recipes
 | `delete`  | Delete     |            |deleteAction| Delete items| 
 
 ## Model
-![](https://i.imgur.com/ywU7LrY.png[/img])
+![](https://i.imgur.com/F4PZavE.png)
 
 ## Wireframe
 
